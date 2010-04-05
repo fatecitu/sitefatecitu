@@ -1,0 +1,1 @@
+<% if @noticias.size > 0 %><h1> Busca por Notícias </h1><h2> A sua busca por <b>"<%= @termo %>"</b> encontrou <%= pluralize @noticias.size, "notícia" %>:<h2><% else %> <%= flash[:info] = "Não há nenhuma notícia com o assunto " %> <b> <%= @termo  %> </b><% end %>  <%=render :partial => 'noticias_procurar' %>

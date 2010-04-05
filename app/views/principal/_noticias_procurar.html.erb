@@ -1,0 +1,7 @@
+<% for noticia in @noticias %>
+<p>
+<h2>Encontrado na categoria <%= noticia.categorianoticia.descricao if noticia.categorianoticia %>
+<%= link_to "#{image_tag("olho.png", :border => 0, :alt => "Mais notícias nessa categoria", :title => "Visualize mais notícias nessa categoria")}", {:controller => "principal", :action => "lista_noticias_categoria", :categorianoticia => noticia.categorianoticia.id} %></h2>
+   
+
+<% end %>

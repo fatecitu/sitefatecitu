@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+   <head>
+      <title>FATEC Itu - Faculdade de Tecnologia de Itu</title>
+	<meta http-equiv="conteudo-Language" conteudo="pt-br" />
+	<meta http-equiv="conteudo-type" conteudo="text/html; charset=iso-8859-1" />
+	<meta name="author" conteudo="Prof. Ricardo Roberto Leme" />
+	<meta name="description" conteudo="Faculdade de Tecnologia de Itu" />
+	<meta name="keywords" conteudo="itu, fatec, vestibular" />	
+	<meta name="Robots" conteudo="index,follow" />
+    <%= stylesheet_link_tag 'sitefatec', :media => 'all' %>
+   </head>
+   <body>
+        <div id="principal">
+<img src="/images/logofatec.jpg" alt="logo da Fatec Itu" />
+            <div id="principal-header">
+                <div id="principal-name"><span>Fatec </span>Itu</div>
+		<div id="principal-slogan"><span>&quot;</span>Fatec Dom Amaury Castanho<span>&quot;</span></div>
+            </div>
+            
+	    <div id="principal-eyecatcher">
+                <div id="principal-navigation"><ul id="navigation">
+				<li><a href="#">Início</a></li>
+				<li><a href="#">Cursos</a></li>
+				<li><a href="#">Como chegar</a></li>
+				<li><a href="#">Vestibular</a></li>
+				<li><a href="#">Contato</a></li>
+				</ul></div>
+            
+	    </div>
+        <div id="procurar">
+		   <% form_for :form, :url => {:action => "procurar"}, :method=>:get do |f| %>
+		   <b>Procurar: </b><%= text_field_tag :busca, "", :size => 100, :style => "width:80%"  %>
+		   <%= submit_tag 'Ok' %>
+		   <% end %>
+		   <br>
+		   <br>
+		</div>   
+            <div id="principal-conteudo">
+
+		<div id="conteudo">
+                <%= yield %>
+                	
+		</div> <!-- conteudo END -->
+
+		<div id="border">
+			<h4>Acesso Rápido</h4>
+			<ul id="subnavigation">
+				<li><a href="#">Área do Professor</a></li>
+				<li><a href="#">Biblioteca</a></li>
+				<li><a href="#">Coordenação</a></li>
+				<li><a href="#">Direção</a></li>
+				<li><a href="#">Jornal</a></li>
+				<li><a href="#">Secretaria Acadêmica</a></li>
+				<li><a href="#">Fórum</a></li>
+				<li><a href="#">Revista Eletrônica</a></li>
+				<li><a href="#">Vestibular</a></li>
+
+			</ul>
+			<hr />
+
+			<h4>Eventos</h4>
+			<ul id="news">
+				<% for evento in @eventos %>
+                   <li> <b> <%=h evento.nome %> </b> de <%=h evento.datainicial.strftime("%d/%m") %> 
+				            a <%=h evento.datafinal.strftime("%d/%m") %>
+							<%= link_to "#{image_tag("editar.png", :border => 0, :alt => "Efetua a inscrição neste evento!", :title => "Efetue a sua inscrição no evento")}", {:controller => "principal", :action => "inscricao_evento", :evento => evento.id} %>
+				   </li>  		
+				<% end %>   
+			</ul>
+			<hr />
+
+			<h4>Nosso Endereço</h4>
+			<p>Fatec Itu<br />				
+            Rua Sorocaba, 119<br />
+			Vila Gatti
+Itu / SP CEP: 13300-340
+Telefones: (11) 4013-5083 / 4013-3129
+<br />
+				
+E-Mail: <a href="mailto:assessoriafatecitu@gmail.com">assessoriafatecitu@gmail.com</a>
+			</p>
+
+		</div>
+
+	    </div>
+
+            <div id="principal-footer">
+                 <div id="footer">
+                    <div id="footer-copyright">&copy; 2010 Fatec Itu - Todos os direitos reservados. <br />
+					<p> Made with Ruby on Rails & Heroku </p>
+                    
+            </div>
+
+        </div> <!-- ENDE principal -->
+   </body>
+</html>

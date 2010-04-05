@@ -1,0 +1,6 @@
+<h1> Últimas <span>Notícias</span> </h1>
+<% for noticia in @noticias %>
+  <h3> <%=h noticia.titulo %> </h3>
+  <p class="quote"><%=h noticia.textocurto %></p>
+  <h5> Categoria: <%= noticia.categorianoticia.descricao %> </h5>
+<% end %>
