@@ -22223,3 +22223,86 @@ Rendering principal/index
   [4;35;1mCategorianoticia Load (0.0ms)[0m   [0mSELECT * FROM "categorianoticias" WHERE ("categorianoticias"."id" = 2) [0m
   [4;36;1mCategorianoticia Load (10.0ms)[0m   [0;1mSELECT * FROM "categorianoticias" WHERE ("categorianoticias"."id" = 1) [0m
 Completed in 371ms (View: 331, DB: 30) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_encoding TO 'UTF-8'[0m
+
+
+Processing Backend::BaseController#index (for 127.0.0.1 at 2010-04-05 15:51:08) [GET]
+  [4;36;1mAccount Load (10.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+Rendering backend/base/index
+Completed in 80ms (View: 0, DB: 10) | 200 OK [http://localhost/backend]
+  [4;35;1mSQL (11.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mSET client_encoding TO 'UTF-8'[0m
+
+
+Processing JavascriptsController#locale to js (for 127.0.0.1 at 2010-04-05 15:51:09) [GET]
+Rendering javascripts/locale
+Completed in 80ms (View: 70, DB: 21) | 200 OK [http://localhost/javascripts/locale.js]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSET client_encoding TO 'UTF-8'[0m
+
+
+Processing JavascriptsController#backend to js (for 127.0.0.1 at 2010-04-05 15:51:09) [GET]
+  Parameters: {"small"=>"0"}
+Rendering javascripts/backend
+  [4;35;1mAccount Load (10.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+Completed in 210ms (View: 190, DB: 20) | 200 OK [http://localhost/javascripts/backend.js?small=0]
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (30.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSET client_encoding TO 'UTF-8'[0m
+
+
+Processing Backend::BaseController#welcome (for 127.0.0.1 at 2010-04-05 15:51:11) [GET]
+  Parameters: {"_dc"=>"1270493470462"}
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (10.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+Rendering backend/base/welcome
+Completed in 150ms (View: 70, DB: 60) | 200 OK [http://localhost/backend/base/welcome?_dc=1270493470462]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_encoding TO 'UTF-8'[0m
+
+
+Processing Backend::NoticiasController#index to js (for 127.0.0.1 at 2010-04-05 15:51:13) [GET]
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+Rendering backend/noticias/index
+Completed in 160ms (View: 20, DB: 0) | 200 OK [http://localhost/backend/noticias.js]
+  [4;36;1mSQL (50.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (120.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (20.0ms)[0m   [0;1mSET client_encoding TO 'UTF-8'[0m
+
+
+Processing Backend::NoticiasController#index to json (for 127.0.0.1 at 2010-04-05 15:51:14) [GET]
+  Parameters: {"fields"=>"noticias.titulo,noticias.textocurto,noticias.textolongo,noticias.fonte,categorianoticias.descricao,noticias.datainicio,noticias.datafim,noticias.vejamais,noticias.created_at,noticias.updated_at", "query"=>"", "_"=>""}
+  [4;35;1mAccount Load (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (10.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+  [4;36;1mNoticia Load (0.0ms)[0m   [0;1mSELECT * FROM "noticias" [0m
+  [4;35;1mNoticia Load (0.0ms)[0m   [0mSELECT * FROM "noticias" LIMIT 50[0m
+  [4;36;1mCategorianoticia Load (0.0ms)[0m   [0;1mSELECT * FROM "categorianoticias" WHERE ("categorianoticias"."id" = 2) [0m
+  [4;35;1mCategorianoticia Load (0.0ms)[0m   [0mSELECT * FROM "categorianoticias" WHERE ("categorianoticias"."id" = 1) [0m
+Completed in 371ms (View: 10, DB: 200) | 200 OK [http://localhost/backend/noticias.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_encoding TO 'UTF-8'[0m
+
+
+Processing Backend::NoticiasController#edit (for 127.0.0.1 at 2010-04-05 15:51:18) [GET]
+  Parameters: {"id"=>"5", "_dc"=>"1270493478198"}
+  [4;35;1mAccount Load (10.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) LIMIT 1[0m
+  [4;36;1mAccount Load (0.0ms)[0m   [0;1mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "accounts" WHERE ("accounts"."id" = 1) [0m
+  [4;36;1mNoticia Load (10.0ms)[0m   [0;1mSELECT * FROM "noticias" WHERE ("noticias"."id" = 5) [0m
+Rendering backend/noticias/edit
+  [4;35;1mCategorianoticia Load (0.0ms)[0m   [0mSELECT * FROM "categorianoticias" WHERE ("categorianoticias"."id" = 2) [0m
+  [4;36;1mTag Load (10.0ms)[0m   [0;1mSELECT * FROM "tags" INNER JOIN "noticias_tags" ON "tags".id = "noticias_tags".tag_id WHERE ("noticias_tags".noticia_id = 5 ) [0m
+Rendered backend/noticias/_form (50.0ms)
+Completed in 190ms (View: 90, DB: 30) | 200 OK [http://localhost/backend/noticias/5/edit?_dc=1270493478198]
