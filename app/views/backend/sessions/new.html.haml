@@ -1,0 +1,12 @@
+-form_tag backend_sessions_path do
+  %h2 Painel Administrativo - Fatec
+  .field 
+    Email:
+    %br=text_field_tag :email, nil, :style => "width:250px"
+  .field
+    Senha:
+    %br=password_field_tag :password, nil, :style => "width:250px"
+  .align-right.bottom.borderd
+    .left=flash[:notice]
+    .right=image_submit_tag("/images/backend/btn-login.png")
+    .clear

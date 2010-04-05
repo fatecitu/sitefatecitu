@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  escolaridade: 
+  email: MyString
+  lattes: MyString
+  twitter: MyString
+  blog: MyString
+  msn: MyString
+  ativo: false
+  account: 
+
+two:
+  nome: MyString
+  escolaridade: 
+  email: MyString
+  lattes: MyString
+  twitter: MyString
+  blog: MyString
+  msn: MyString
+  ativo: false
+  account: 

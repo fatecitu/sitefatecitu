@@ -1,0 +1,17 @@
+# This file is used for translate Model/Table an their Attributes/Columns
+# Translation to Brazilian Portuguese by Ricardo Leme
+br:
+  activerecord:
+    models:
+      docente: Docente
+    attributes:
+      docente:
+        nome: Nome		
+        email: Endereço Eletrônico
+        lattes: Currículo Lattes
+        twitter: Twitter
+        blog: Blog
+        msn: Comunicador Instântaneo		
+        ativo: Ativo?
+        created_at: Data de Criação
+        updated_at: Data de Alteração 

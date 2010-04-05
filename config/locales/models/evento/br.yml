@@ -1,0 +1,16 @@
+# This file is used for translate Model/Table an their Attributes/Columns
+# Translation to Brazilian Portuguese by Ricardo Leme
+br:
+  activerecord:
+    models:
+      evento: Evento
+    attributes:
+      evento:
+        nome: Nome		
+        descricao: Descrição
+        datainicial: Data Inicial de Inscrição
+        datafinal: Data Final de Inscrição
+        local: Local
+        inscritos: Nº máximo de inscritos     
+        created_at: Data de Criação
+        updated_at: Data de Alteração 

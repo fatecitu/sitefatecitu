@@ -1,0 +1,22 @@
+=simple_error_messages_for :evento
+-tab :general do
+  %table.full
+    %tr
+      %td.fixed=human_name_for :evento, :nome
+      %td=text_field :evento, :nome
+    %tr
+      %td.fixed=human_name_for :evento, :descricao
+      %td=text_area :evento, :descricao
+    %tr
+      %td.fixed=human_name_for :evento, :datainicial
+      %td=ext_date_select :evento, :datainicial
+    %tr
+      %td.fixed=human_name_for :evento, :datafinal
+      %td=ext_date_select :evento, :datafinal
+    %tr
+      %td.fixed=human_name_for :evento, :local
+      %td=text_field :evento, :local
+    %tr
+      %td.fixed=human_name_for :evento, :inscritos
+      %td=text_field :evento, :inscritos
+      

@@ -1,0 +1,36 @@
+=simple_error_messages_for :noticia
+-tab :general do
+  %table.full
+    %tr
+      %td.fixed=human_name_for :noticia, :titulo
+      %td=text_field :noticia, :titulo
+    %tr
+      %td.fixed=human_name_for :noticia, :textocurto
+      %td=text_field :noticia, :textocurto
+    %tr
+      %td.fixed=human_name_for :noticia, :textolongo
+      %td=text_area :noticia, :textolongo
+    %tr
+      %td.fixed=human_name_for :noticia, :fonte
+      %td=text_field :noticia, :fonte
+    %tr
+      %td.fixed=human_name_for :noticia, :datainicio
+      %td=ext_date_select :noticia, :datainicio
+    %tr
+      %td.fixed=human_name_for :noticia, :datafim
+      %td=ext_date_select :noticia, :datafim
+    %tr
+      %td.fixed=human_name_for :noticia, :vejamais
+      %td=text_field :noticia, :vejamais
+    %tr
+      %td.fixed=human_name_for :noticia, :categorianoticia
+      %td=open_standard_grid :noticia, :categorianoticia, :id, :descricao      
+    %tr
+      %td=human_name_for :noticia, :tags
+      %td
+        %span#tag_nomes=@noticia.tag.collect(&:nome).join(", ") rescue t(:none, :scope => :"backend.menus")
+        =hidden_field :docente, :tag_ids, :value => @noticia.tag_ids.join(",")
+        =open_grid image_tag("backend/new.gif", :style => "vertical-align:bottom"), "/backend/tags.js", "gridPanel", |
+          :update => "$('docente_tag_ids').value = selections.collect(function(s) { return s.id }).join(',');"+ |
+          "$('tag_nomes').innerHTML = selections.collect(function(s) { return s.data['tags.descricao'] }).join(', ');" |
+

@@ -1,0 +1,8 @@
+=title "Painel de Controle"
+.padding
+  %table
+    %tr
+      %td{:style=>"width:50%;vertical-align:top"}
+        -box tt("O que você gostaria de fazer?") do
+          %li=link_to_function tt("Criar um novo usuário"), "Backend.app.load('/backend/accounts/new')"
+          %li=link_to_function tt("Visualizar os usuários"), "Backend.app.load('/backend/accounts.js')"

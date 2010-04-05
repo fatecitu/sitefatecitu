@@ -1,0 +1,230 @@
+br:
+  backend:
+    tabs:
+      general: "Geral"
+    titles:
+      welcome: "Bem vindo"
+    general:
+      list: "Listar {{model}}"
+      editForm: "Editar {{model}} {{value}}"
+      newForm: "Novo {{model}}"
+      cantDelete: "Você não pode apagar este registro"
+      page: "Página"
+      none: "Nenhum"
+      of: "de"
+    sessions:
+      wrong: "E-mail ou senha inválida"
+      logout: "Logout efetuado com sucesso"
+    menus:
+      account: "Usuário"
+      categorianoticias: "Categoria de Notícias"	  
+      categoriaarquivos: "Categorias de Arquivos"
+      escolaridades: "Nível de Escolaridade"
+      tags: "Marcadores"
+      list: "Listar"
+      new: "Novo"
+      help: "Ajuda"
+    labels:
+      none: "Nenhum"
+      add: "Adicionar"
+      remove: "Remover"
+      upload_file: "Arquivo carregado"
+      upload_files: "Arquivos carregados"
+      upload_image: "Imagem carregada"
+      upload_images: "Imagens carregadas"
+    texts: 
+      order_updated: Ordem alterada!
+    javascripts:
+      buttons:
+        add: "Adicionar"
+        edit: "Editar"
+        remove: "Apagar"
+        back: "Voltar"
+        save: "Salvar"
+        close: "Fechar"
+        select: "Selecionar"
+        help: "Ajuda"
+        send: "Enviar"
+      help:
+        title: "Solicitar suporte"
+        description: "Diga o problema que você está tendo e como podemos reproduzi-lo."
+        compliments: "A sua solicitação foi enviada com sucesso!"
+      labels:
+        all: "Todos "
+        search: "Procurar"
+      messages:
+        compliments: 
+          title: "Parabéns"
+          message: "Seus dados foram salvos com sucesso."
+        wait:
+          title: "Enviando os dados"
+          message: "Enviando os dados aos servidores..."
+        confirm:
+          title: "Você tem certeza ?"
+          message: "Você confirma a exclusão de {0} item(ns) ?"
+        alert:
+          title: "Atenção"
+          message: "Existem alguns problemas na conexão.<br />Entre em contato com o suporte técnico."
+          notConfigured: "Este item ainda não está disponível.<br />Entre em contato com o suporte técnico."
+          notSelected: "Você deve selecionar pelo menos um registro"
+
+    emails:
+      registration: 
+        object: "A sua conta foi ativada"
+        body: "Olá {{name}},\na sua conta foi ativada.\n\nVocê pode logar informando o seu usuário e senha:\n\n- Email: {{email}}\n- Senha: {{password}}\n\n através do seguinte endereço URL: {{url}}"
+      support:
+        object: "Solicitação de Suporte"
+      footer: "\n---------------------------\nObrigado,\nLipsiaSoft s.r.l."
+    
+    print:
+      footer: 
+        page: "Página"
+        page_of: "de"
+  
+  extjs:
+    dateFormat: "d/m/Y"
+    none: "Nenhum"
+    dateTimeFormat: "d/m/Y G:i"
+    ddText: "{0} linha selecionada(s)"
+    closeText: "Fechar esta aba"
+    invalidText: "O valor informado no campo é inválido"
+    msg: "Carregando..."
+    emptyText: ""
+    splitRegion:
+      splitTip: "Arraste para redimensionar."
+      collapsibleSplitTip: "Arraste para redimensionar. Duplo clique para esconder."
+    messageBox:
+      ok: "OK"
+      yesse: "Sim"
+      cancel: "Cancelar"
+      none: "Não"
+    datePicker:
+      todayText: "Hoje"
+      minText: "A data é menor que a data mínima"
+      maxText: "A data é maior que a data máxima"
+      disabledDaysText: ""
+      disabledDatesText: ""
+      nextText: 'Próximo Mês (Control+Direita)'
+      prevText: 'Mês Anterior (Control+Esquerda)'
+      monthYearText: 'Selecione um mês (Control+Cima/Baixo para mover os anos)'
+      todayTip: "{0} (Barra de Espaço)"
+      format: "d/m/y"
+      cancelText: "Cancelar"
+      okText: "&#160;OK&#160;"
+      startDay: 0
+    grid:
+      gridView:
+        sortAscText: "Ordenação Ascendente"
+        sortDescText: "Ordenação Descendente"
+        lockText: "Bloquear a coluna"
+        unlockText: "Desbloquear a coluna"
+        columnsText: "Colunas"
+      groupingView:
+        emptyGroupText: '(Nenhum)'
+        groupByText: 'Agrupar por este campo'
+        showGroupsText: 'Mostrar em Grupos'
+      propertyColumnModel:
+        nameText: "Nome"
+        valueText: "Valor"
+        dateFormat: "j/m/Y"
+    search:
+      searchText: "Busca"
+      searchTipText: "Insira uma palavra para efetuar a busca"
+      selectAllText: "Selecionar Todos"
+      minCharsTipText: "Insira no mínimo {0} caracteres"
+    pagingToolbar:
+      beforePageText: "Página"
+      afterPageText: "de {0}"
+      firstText: "Primeira Página"
+      prevText: "Página Anterior"
+      nextText: "Próxima Página"
+      lastText: "Última Página"
+      refreshText: "Atualizar"
+      displayMsg: "Exibindo {0} - {1} de {2}"
+      emptyMsg: 'Não há dados para exibir'
+    form:
+      textField:
+        minLengthText: "O tamanho mínimo para este campo é {0}"
+        maxLengthText: "O tamanho máximo para este campo é {0}"
+        blankText: "O campo é obrigatório"
+        regexText: ""
+        emptyText: ""
+      numberField:
+        minText: "O valor mínimo para este campo é {0}"
+        maxText: "O valor máximo para este campo é {0}"
+        nanText: "{0} não é um número válido"
+      dateField:
+        disabledDaysText: "Desabilitado"
+        disabledDatesText: "Desabilitado"
+        minText: "A data neste campo deve ser após {0}"
+        maxText: "A data neste campo deve ser antes de {0}"
+        invalidText: "{0} não é uma data válida - Ela deve estar no formato {1}"
+        format: "d/m/y"
+        altFormats: "d/m/Y|d-m-y|d-m-Y|d/m|d-m|dm|dmy|dmY|d|Y-m-d"
+      comboBox:
+        loadingText: "Carregando..."
+        valueNotFoundText: ""
+      vTypes:
+        emailText: 'Este campo deve ser um endereço de e-mail no formato "usuário@domínio.com"'
+        urlText: 'Este campo deve ser um endereço URL no formato "http://www.domínio.com"'
+        alphaText: 'Este campo deve conter apenas letras e _'
+        alphanumText: 'Este campo deve conter apenas letras, números e _'
+      htmlEditor:
+        createLinkText: 'Insira a URL:'
+        buttonTips:
+          bold:
+            title: 'Negrito (Ctrl+B)'
+            text: 'Altera o texto selecionado para negrito.'
+            cls: 'x-html-editor-tip'
+          italic:
+            title: 'Itálico (Ctrl+I)'
+            text: 'Altera o texto selecionado em itálico.'
+            cls: 'x-html-editor-tip'
+          underline:
+            title: 'Sublinhado (Ctrl+U)'
+            text: 'Sublinha o texto selecionado.'
+            cls: 'x-html-editor-tip'
+          increasefontsize:
+            title: 'Aumentar o texto'
+            text: 'Aumenta o tamanho da fonte.'
+            cls: 'x-html-editor-tip'
+          decreasefontsize:
+            title: 'Diminuir o texto'
+            text: 'Diminui o tamanho da fonte.'
+            cls: 'x-html-editor-tip'
+          backcolor:
+            title: 'Cor de Fundo'
+            text: 'Altera a cor de fundo do texto selecionado'
+            cls: 'x-html-editor-tip'
+          forecolor:
+            title: 'Cor da Fonte'
+            text: 'Altera o cor da fonte do texto selecionado.'
+            cls: 'x-html-editor-tip'
+          justifyleft:
+            title: 'Alinhar o texto à esquerda'
+            text: 'Alinha o texto à esquerda.'
+            cls: 'x-html-editor-tip'
+          justifycenter:
+            title: 'Centralizar o texto'
+            text: 'Centraliza o texto.'
+            cls: 'x-html-editor-tip'
+          justifyright:
+            title: 'Alinha o texto à direita'
+            text: 'Alinha o texto à direita.'
+            cls: 'x-html-editor-tip'
+          insertunorderedlist:
+            title: 'Marcador'
+            text: 'Cria uma lista de marcadores.'
+            cls: 'x-html-editor-tip'
+          insertorderedlist:
+            title: 'Lista Numérica'
+            text: 'Cria uma lista numérica.'
+            cls: 'x-html-editor-tip'
+          createlink:
+            title: 'Hyperlink'
+            text: 'Transforma o texto selecionado em um hyperlink.'
+            cls: 'x-html-editor-tip'
+          sourceedit:
+            title: 'Editar código fonte'
+            text: 'Muda para a edição do código fonte.'
+            cls: 'x-html-editor-tip'

@@ -1,0 +1,13 @@
+# This file is used for translate Model/Table an their Attributes/Columns
+# Translation to Brazilian Portuguese by Ricardo Leme
+br:
+  activerecord:
+    models:
+      funcionario: Funcionário
+    attributes:
+      funcionario:
+        nome: Nome		
+        email: Endereço Eletrônico
+        created_at: Data de Criação
+        none: Nessuno
+        updated_at: Data de Alteração 

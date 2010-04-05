@@ -1,0 +1,13 @@
+common:
+  project: Site FATEC - Faculdade de Tecnologia de Itu
+  email_from: contato@fatecitu.edu.br
+  email_help: ajuda@fatecitu
+
+production:
+  host_addr: http://www.fatecindaiatuba.edu.br
+
+development:
+  host_addr: http://localhost
+  
+test:
+  host_addr: http://localhost

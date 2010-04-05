@@ -1,0 +1,16 @@
+=simple_error_messages_for :curso
+-tab :general do
+  %table.full
+    %tr
+      %td.fixed=human_name_for :curso, :nome
+      %td=text_field :curso, :nome
+    %tr
+      %td.fixed=human_name_for :curso, :visaogeral
+      %td=text_area :curso, :visaogeral
+    %tr
+      %td.fixed=human_name_for :curso, :duracao
+      %td=text_field :curso, :duracao
+    %tr
+      %td.fixed=human_name_for :curso, :carreira
+      %td=text_area :curso, :carreira
+      

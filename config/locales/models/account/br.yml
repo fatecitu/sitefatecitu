@@ -1,0 +1,17 @@
+# This file is used for translate Model/Table an their Attributes/Columns
+# Translation to Brazilian Portuguese by Ricardo Leme
+br:
+  activerecord:
+    models:
+      account: Usuário
+    attributes:
+      account:
+        name: Nome
+        surname: Sobrenome
+        created_at: Data de Criação
+        updated_at: Data de Alteração
+        role: Grupo
+        password: Senha		   
+        password_confirmation: Confirmação da Senha
+        created_at: Data de Criação
+        updated_at: Data de Alteração 

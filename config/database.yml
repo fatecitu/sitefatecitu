@@ -1,0 +1,25 @@
+
+development:
+  adapter: postgresql
+  encoding: UTF-8
+  database: sitefatec_development
+  pool: 5
+  username: projetofatec
+  password: fatec
+
+  
+test:
+  adapter: postgresql
+  encoding: UTF-8
+  database: sitefatec_test
+  pool: 5
+  username: projetofatec
+  password: fatec
+
+production:
+  adapter: postgresql
+  encoding: UTF-8
+  database: sitefatec_production
+  pool: 5
+  username: projetofatec
+  password: fatec

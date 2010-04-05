@@ -1,0 +1,12 @@
+# This file is used for translate Model/Table an their Attributes/Columns
+# Translation to Brazilian Portuguese by Ricardo Leme
+br:
+  activerecord:
+    models:
+      discente: Discente
+    attributes:
+      discente:
+        ra: Número RA
+        created_at: Data de Criação
+        updated_at: Data de Alteração 		
+        

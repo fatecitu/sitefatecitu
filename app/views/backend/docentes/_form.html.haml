@@ -1,0 +1,33 @@
+=simple_error_messages_for :docente
+-tab :general do
+  %table.full
+    %tr
+      %td.fixed=human_name_for :docente, :nome
+      %td=text_field :docente, :nome
+    %tr
+      %td.fixed=human_name_for :docente, :email
+      %td=text_field :docente, :email
+    %tr
+      %td.fixed=human_name_for :docente, :lattes
+      %td=text_field :docente, :lattes
+    %tr
+      %td.fixed=human_name_for :docente, :twitter
+      %td=text_field :docente, :twitter
+    %tr
+      %td.fixed=human_name_for :docente, :blog
+      %td=text_field :docente, :blog
+    %tr
+      %td.fixed=human_name_for :docente, :msn
+      %td=text_field :docente, :msn
+    %tr
+      %td.fixed=human_name_for :docente, :ativo
+      %td=check_box :docente, :ativo
+    %tr
+      %td=human_name_for :docente, :disciplinas
+      %td
+        %span#disciplina_nomes=@docente.disciplina.collect(&:nome).join(", ") rescue t(:none, :scope => :"backend.menus")
+        =hidden_field :docente, :disciplina_ids, :value => @docente.disciplina_ids.join(",")
+        =open_grid image_tag("backend/new.gif", :style => "vertical-align:bottom"), "/backend/disciplinas.js", "gridPanel", |
+          :update => "$('docente_disciplina_ids').value = selections.collect(function(s) { return s.id }).join(',');"+ |
+          "$('disciplina_nomes').innerHTML = selections.collect(function(s) { return s.data['disciplinas.nome'] }).join(', ');" |
+      

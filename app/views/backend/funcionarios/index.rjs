@@ -1,0 +1,19 @@
+page.grid do |grid|
+  grid.id "grid-funcionarios"
+  grid.title list_title_for(Funcionario)
+  grid.base_path "/backend/funcionarios"
+  grid.forgery_protection_token request_forgery_protection_token
+  grid.authenticity_token form_authenticity_token
+  grid.tbar  :default
+  grid.sm :checkbox
+  grid.store do |store|
+    store.url "/backend/funcionarios.json"
+    store.fields @column_store.store_fields
+	store.groupField "escolaridades.descricao" 
+    store.sortInfo  :field => "funcionarios.nome", :direction => "ASC"
+  end
+  grid.columns do |columns|
+    columns.fields @column_store.column_fields
+  end
+  grid.bbar  :store => grid.get_store, :pageSize => params[:limit], :displayInfo => true
+end

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  descricao: MyText
+  datainicial: 2010-03-23
+  datafinal: 2010-03-23
+  local: MyString
+  inscritos: 1
+
+two:
+  nome: MyString
+  descricao: MyText
+  datainicial: 2010-03-23
+  datafinal: 2010-03-23
+  local: MyString
+  inscritos: 1

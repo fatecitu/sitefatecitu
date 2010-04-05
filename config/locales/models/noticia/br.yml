@@ -1,0 +1,18 @@
+# This file is used for translate Model/Table an their Attributes/Columns
+# Translation to Brazilian Portuguese by Ricardo Leme
+br:
+  activerecord:
+    models:
+      noticia: Notícias
+    attributes:
+      noticia:
+        titulo: Título
+        textocurto: Resumo
+        textolongo: Texto
+        fonte: Fonte da Notícia
+        categorianoticia: Categoria da Notícia
+        datainicio: Data inicial de Publicação
+        datafim: Data final de Publicação		
+        vejamais: Veja mais
+        created_at: Data de Criação
+        updated_at: Data de Alteração 

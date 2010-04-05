@@ -1,0 +1,8 @@
+=simple_error_messages_for :disciplina
+-tab :general do
+  %table.full
+    %tr
+      %td.fixed=human_name_for :disciplina, :nome
+      %td=text_field :disciplina, :nome     
+=tab_editor :disciplina, :ementa,  :ementa
+=tab_editor :disciplina, :objetivo,  :objetivo

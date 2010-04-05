@@ -1,0 +1,395 @@
+/* 
+Title: CSS Portal Template
+Author: Dexter Zafra, Norwalk, CA.
+Created On: 12/22/05
+Author Website: http://www.ex-designz.net and www.myasp-net.com
+Copyright 2005 Ex-designz.net and Myasp-net.com
+*/
+
+/* --- Begin Body ---------- */
+body {
+   margin: 0;
+   padding: 0;
+   font-family:Verdana, Tahoma, Arial, Serif;
+   text-align: center;
+   line-height: 1.5em;
+   font-size: 10px; /* This is for IE 5 version */
+   voice-family: "\"}\""; 
+   voice-family: inherit;
+   font-size: 10px; /* This is for easy scaling */
+   font-size: 0.76em;
+   background-color:#336699;
+   color:#333;  	
+}
+/* --- End Body ----------- */
+
+
+/* --- Begin Body wrapper ---------- */
+#bodywrap {
+   position: relative;
+   margin: 0 auto ;
+   padding:0;	
+   text-align: left;
+   background-color:#fff;  		
+   /* box model hack - dont edit this part*/
+   width: 776px;
+   voice-family: "\"}\""; 
+   voice-family: inherit;
+   width: 776px;	
+}
+/* --- End Body wrapper ----------- */
+
+
+/* --- Hack for Opera Browser - Making sure Opera render 776px width ----- */
+
+html>body #bodywrap { 
+   width: 776px;
+}
+
+
+/* --- Begin Headline news h2 title ----------- */
+h2 {
+   font-size: 1.3em;
+   color: #993333;
+   padding: 4px 0 0 0;
+   margin: 0;
+   font-family: 'Lucida Grande', 'Trebuchet MS', sans-serif;	
+   border-bottom:#c7c7c7 1px dashed;	
+}
+/* --- End Headline news h2 title ------------ */
+
+
+/* --- Handle body Links -------------------- */
+a {
+  text-decoration: none;
+}
+a:link {
+   color: #0063C6;
+}
+a:visited {
+   color: #0063C6;
+}
+a:hover {
+   color: #993333;
+   text-decoration:underline;
+}
+a:active {
+   color: #5B739C;
+}
+/* --- End Handle body Links -------------------- */
+
+
+/* --- Handle all paragraph section in the body -------- */
+p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  line-height: 1.5em;	
+}
+/* --- End Handle all paragraph section in the body --- */
+
+
+/* --- Header Top Right Search Field section ------------- */
+.sfield {
+  background-color:#fff;
+  border: 1px solid #A0CBFE;
+  font-size : 11px;
+}
+	
+/* --- Header Logo Section ----------------------- */
+#header {
+   height: 118px;
+   margin:0 0 0 0;	
+   border:#fff 0px solid;	
+   border-bottom-width:0px;
+   width: 775px;
+   padding:0;	
+   background: #fff url(images/header.jpg) no-repeat left top;
+   position:relative;		
+}
+/* --- Container for Header Top Right Search Section -------- */
+#header h1 {
+   float: right;
+   text-align:left;
+   color: #fff;
+   font-size: 11px;
+   margin:0px auto;
+   padding-top: 6px;
+   padding-right: 15px;	
+}
+/* --- End Container for Header Top Right Search Section -------- */
+
+
+/* --- Begin Top Blue Navigation Menu ---------- */
+#mainnav {
+   background:#1E5AE6 url(images/navmenu_back.gif) top left repeat-x;
+   float: left;
+   margin-left: 0px;
+   margin-right: 0px;
+   width:100%;
+   border:solid #A8BAE6;
+   border-width:1px 0;
+}
+#mainnav ul { 
+   padding: 0; 
+}
+#mainnav ul li { 
+   display: inline; 
+}
+#mainnav ul {
+   margin: 0;
+   padding: 0;
+   color: #000000;
+   font-size: 1.2em;
+   font-family:Verdana, Tahoma, Arial, Serif;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   letter-spacing: 2px;
+}
+#mainnav ul li a {
+   padding: 0.2em 8px;
+   color: #000;
+   text-decoration: none;
+   float: left;
+   border-right: 1px solid #A8BAE6;
+}
+#mainnav ul li a:hover {
+   background-color: #95B2F4;
+   color: #FFFFFF;
+}
+#navlist li a:hover, #navlist li a:active {
+   color: #FFFFFF;
+   text-decoration: none;
+   background: #95B2F4;
+ 
+   text-align: left;
+}
+/* --- End Top Blue Navigation Menu --------- */
+
+
+/* --- Begin Middle Main Container ----------- */
+#maincont {
+   float: left;
+   width: 542px;
+   margin: 0 0 0 3px;	
+   display:inline;
+}
+#maincont ul 
+{
+   margin:5px 10px;
+   padding:5px;
+}
+#maincont ul li {
+   list-style:none;
+   background:url(images/liimage.gif) no-repeat left;
+   padding-left:15px;	
+}
+/* --- End Middle Main Container ----------- */
+
+
+/* --- Handle Middle Section Title and Sub Container --------- */
+.midcont-title, .midcont-title a {
+   color:#800000;
+}
+.midcontainer {
+   margin:0px 10px 20px 8px;	
+   padding:10px 5px 0;
+   border-bottom:#c7c7c7 1px dashed;	
+}
+/* --- End Handle Middle Section Title and Sub Container ----- */
+
+
+/* --- Begin Two Columns Middle Container -------- */
+.col1 { 
+float: left; 
+   margin-top: 18px;
+   margin-bottom: 0;
+   padding-right: 10px;
+   width: 260px; 
+   border-right:#ccc 1px solid;
+}
+.midtitle {
+   font-family:Verdana, Tahoma, Arial, Serif;
+   font-size: 12px;
+   font-weight: bold;
+   color: #800000;
+}
+.col2 { 
+   float: right; 
+   margin-top: 12px;
+   margin-bottom: 0;
+   padding-right: 4px;
+   width: 260px; 
+}
+.col3 { 
+   float: left; 
+   width: 260px; 
+   padding-right: 10px;
+   border-right:#ccc 1px solid;
+}
+.col4 { 
+   float: right; 
+   padding-right: 4px;
+   width: 260px; 
+}
+/* --- End Two Columns Middle Container ----------- */
+
+
+/* --- Begin Picture Border ------------------------ */
+.pic_box, a.pic_boxbox { 
+   clear: both; 
+   float: left; 
+   border: 2px solid #fff; 
+   background-color: #fff; 
+   padding: 1px; 
+   margin-right: 1px;
+   margin-top: 2px;
+} 
+a.pic_box:hover {
+   border: 2px solid #97CBFF;
+}
+/* --- End Picture Border ------------------------- */
+
+
+/* --- Begin Right Side Panel ----------------------*/
+#rightsidepanel {
+   float: left;
+   text-align: left;
+   width: 200px;
+   padding:0px 15px 0 15px;	
+   margin:0;
+   color:#666;
+   line-height:1.3em;	
+   background-color:#fff;
+   border-left:#c7c7c7 1px solid;
+}
+#rightsidepanel form {
+   margin-top: 0; 
+   margin-bottom: 0;
+}
+#rightsidepanel h2 {
+   font-family: verdana, arial, sans-serif;
+   text-align: left;		
+   font-size: 14px;
+   font-weight; bold;
+   color: #456;	
+   padding-top: 13px;
+   padding-left: 4px;		
+   border-bottom:#c7c7c7 1px dashed;	
+   background:none;
+}
+#rightsidepanel h3 {
+   font-family: verdana, arial, sans-serif;
+   text-align: left;		
+   font-size: 14px;
+   font-weight; bold;
+   color: #456;	
+   padding-top: 5px;
+   padding-left: 4px;		
+   border-bottom:#c7c7c7 1px dashed;	
+   background:none;
+}
+#rightsidepanel ul {
+   list-style: none;
+   list-style-image: none;
+   margin: 4px 0 10px 0;	
+   font-size: 0.9em;	
+   padding:0 1em 10px;
+   border-bottom:#c7c7c7 1px dashed;
+}
+#rightsidepanel ul li {
+   background:url(images/arrdown.gif) no-repeat left;
+   margin: 0;
+   text-align: left;
+   padding-left:12px;				
+   list-style:none;
+}
+#rightsidepanel ul li a {
+   color: #80664D;	
+   font-size: 12px;
+   text-decoration: none;	
+}
+#rightsidepanel ul li a:visited { 
+   color: #80664D; 
+}
+#rightsidepanel ul li a:hover {
+   padding-right: 12px;
+   color: #993333;	
+   text-decoration:underline;
+}
+.adspic {
+   text-align:left; 
+   padding-left: 16px;
+   padding-bottom: 16px;
+   margin-left: 6px
+}
+.newsletter {
+   width: auto;
+   text-align:left; 
+   padding-left: 0px;
+   padding-bottom: 6px;
+   margin-right: 6px;
+   margin-left; 10px;
+   margin-bottom: 12px;
+   border:#A0CBFE 1px solid;
+}
+.newsletfield {
+   font-size: 11px;
+   background-color:#fffff9;
+   border: 1px solid #C5D9EB;
+   margin-bottom: 5px;
+}
+.newsletterheader {
+   text-align:left; 
+   padding-left: 2px;
+   background-color: #A0CBFE;
+   font-size : 11px;  
+   color: #fff;
+   font-weight: bold;
+   font-family : verdana, arial, helvetica, sans-serif; 
+   text-decoration : none;
+}
+.submit {
+   color : #fff; 
+   font-family : verdana, arial, helvetica, sans-serif; 
+   font-size : 8pt; 
+   font-weight : bold; 
+   background-color : #A0CBFE; 
+   border : 1px solid #dadada; 
+   cursor : pointer; 
+} 
+.rsidespan {
+   font-size : 11px;  
+   font-weight: normal;
+   font-family : verdana, arial, helvetica, sans-serif; 
+   text-decoration : none; 
+} 
+/* --- End Right Side Panel ---------------------------- */
+
+
+/* --- Begin Footer ----------------------------------- */
+#footer {
+   clear: both;
+   text-align: center;
+   background:#474747;
+   width: 755px;
+   color: #ccc;
+   font-size: 0.9em;		
+   padding:5px 10px;
+   background-color: #333333;
+   border-right:#333333 1px solid;
+   border-top:#4B87C2 3px solid;           	
+}
+#footer strong {
+   color:#fff;
+}
+#footer a {
+   color:#fff;
+   font-weight:bold;	
+   text-decoration:none;
+}
+#footer a:hover {
+   color:#fff;
+   font-weight:bold;	
+   text-decoration: underline;	
+}
+/* --- End Footer ----------------------------------- */

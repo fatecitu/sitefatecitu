@@ -1,0 +1,16 @@
+=simple_error_messages_for :funcionario
+-tab :general do
+  %table.full
+    %tr
+      %td.fixed=human_name_for :funcionario, :nome
+      %td=text_field :funcionario, :nome
+    %tr
+      %td.fixed=human_name_for :funcionario, :email
+      %td=text_field :funcionario, :email
+    %tr
+      %td.fixed=human_name_for :funcionario, :escolaridade
+      %td=open_standard_grid :funcionario, :escolaridade, :id, :descricao
+    %tr
+      %td.fixed=human_name_for :funcionario, :cargo
+      %td=open_standard_grid :funcionario, :cargo, :id, :descricao
+ 

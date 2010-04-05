@@ -1,0 +1,12 @@
+=simple_error_messages_for :discente
+-tab :general do
+  %table.full
+    %tr
+      %td.fixed=human_name_for :discente, :ra
+      %td=text_field :discente, :ra
+    %tr
+      %td.fixed=human_name_for :discente, :account
+      %td=open_standard_grid :discente, :account, :id, :email
+    %tr
+      %td.fixed=human_name_for :discente, :curso
+      %td=open_standard_grid :discente, :curso, :id, :nome      
