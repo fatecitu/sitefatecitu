@@ -14937,3 +14937,7 @@ ActionView::MissingTemplate (Missing template principal/index.erb in view path a
   c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_encoding TO 'UTF-8'[0m
+  [4;35;1mSQL (60.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
