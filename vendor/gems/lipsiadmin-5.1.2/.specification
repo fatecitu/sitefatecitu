@@ -1,0 +1,495 @@
+--- !ruby/object:Gem::Specification 
+name: lipsiadmin
+version: !ruby/object:Gem::Version 
+  prerelease: false
+  segments: 
+  - 5
+  - 1
+  - 2
+  version: 5.1.2
+platform: ruby
+authors: 
+- Davide D'Agostino
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-02-02 00:00:00 -02:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: haml
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        segments: 
+        - 0
+        version: "0"
+  type: :runtime
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: rails
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        segments: 
+        - 2
+        - 2
+        - 1
+        version: 2.2.1
+  type: :runtime
+  version_requirements: *id002
+description: 
+email: d.dagostino@lipsiasoft.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- CHANGELOG
+- README.rdoc
+- MIT-LICENSE
+- Rakefile
+- init.rb
+- lipsiadmin_generators/attachment/attachment_generator.rb
+- lipsiadmin_generators/attachment/REMEMBER
+- lipsiadmin_generators/attachment/templates/controller.rb
+- lipsiadmin_generators/attachment/templates/migration.rb
+- lipsiadmin_generators/attachment/templates/model.rb
+- lipsiadmin_generators/backend/backend_generator.rb
+- lipsiadmin_generators/backend/REMEMBER
+- lipsiadmin_generators/backend/templates/config/config.yml
+- lipsiadmin_generators/backend/templates/config/initializers/config.rb
+- lipsiadmin_generators/backend/templates/config/initializers/emails.rb
+- lipsiadmin_generators/backend/templates/config/initializers/exception_notifier.rb
+- lipsiadmin_generators/backend/templates/config/locales/backend/de.yml
+- lipsiadmin_generators/backend/templates/config/locales/backend/en.yml
+- lipsiadmin_generators/backend/templates/config/locales/backend/it.yml
+- lipsiadmin_generators/backend/templates/config/locales/models/account/de.yml
+- lipsiadmin_generators/backend/templates/config/locales/models/account/en.yml
+- lipsiadmin_generators/backend/templates/config/locales/models/account/it.yml
+- lipsiadmin_generators/backend/templates/config/locales/rails/de.yml
+- lipsiadmin_generators/backend/templates/config/locales/rails/en.yml
+- lipsiadmin_generators/backend/templates/config/locales/rails/it.yml
+- lipsiadmin_generators/backend/templates/controllers/backend/accounts_controller.rb
+- lipsiadmin_generators/backend/templates/controllers/backend/base_controller.rb
+- lipsiadmin_generators/backend/templates/controllers/backend/sessions_controller.rb
+- lipsiadmin_generators/backend/templates/controllers/backend_controller.rb
+- lipsiadmin_generators/backend/templates/controllers/javascripts_controller.rb
+- lipsiadmin_generators/backend/templates/exceptions/template.html.haml
+- lipsiadmin_generators/backend/templates/helpers/backend_helper.rb
+- lipsiadmin_generators/backend/templates/images/backend/association_break.png
+- lipsiadmin_generators/backend/templates/images/backend/association_ok.png
+- lipsiadmin_generators/backend/templates/images/backend/back.gif
+- lipsiadmin_generators/backend/templates/images/backend/background.png
+- lipsiadmin_generators/backend/templates/images/backend/bg-content.png
+- lipsiadmin_generators/backend/templates/images/backend/bg-hd-slate.png
+- lipsiadmin_generators/backend/templates/images/backend/bg-hd.png
+- lipsiadmin_generators/backend/templates/images/backend/bg-intro.png
+- lipsiadmin_generators/backend/templates/images/backend/bg-login.png
+- lipsiadmin_generators/backend/templates/images/backend/bg-menu-slate.png
+- lipsiadmin_generators/backend/templates/images/backend/bg-menu.png
+- lipsiadmin_generators/backend/templates/images/backend/bg.png
+- lipsiadmin_generators/backend/templates/images/backend/btn-login.png
+- lipsiadmin_generators/backend/templates/images/backend/categories.gif
+- lipsiadmin_generators/backend/templates/images/backend/delete.gif
+- lipsiadmin_generators/backend/templates/images/backend/download.gif
+- lipsiadmin_generators/backend/templates/images/backend/duplicate.gif
+- lipsiadmin_generators/backend/templates/images/backend/edit.gif
+- lipsiadmin_generators/backend/templates/images/backend/hd-bg-slate.gif
+- lipsiadmin_generators/backend/templates/images/backend/hd-bg.gif
+- lipsiadmin_generators/backend/templates/images/backend/it.gif
+- lipsiadmin_generators/backend/templates/images/backend/loader.gif
+- lipsiadmin_generators/backend/templates/images/backend/logo-loader.png
+- lipsiadmin_generators/backend/templates/images/backend/logo-small.png
+- lipsiadmin_generators/backend/templates/images/backend/new.gif
+- lipsiadmin_generators/backend/templates/images/backend/no-image.png
+- lipsiadmin_generators/backend/templates/images/backend/preview.gif
+- lipsiadmin_generators/backend/templates/images/backend/print.gif
+- lipsiadmin_generators/backend/templates/images/backend/save.gif
+- lipsiadmin_generators/backend/templates/images/backend/support.gif
+- lipsiadmin_generators/backend/templates/images/backend/us.gif
+- lipsiadmin_generators/backend/templates/images/ext/charts.swf
+- lipsiadmin_generators/backend/templates/images/ext/default/box/corners-blue.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/box/corners.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/box/l-blue.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/box/l.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/box/r-blue.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/box/r.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/box/tb-blue.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/box/tb.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/button/arrow.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/button/btn.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/button/group-cs.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/button/group-lr.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/button/group-tb.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/button/s-arrow-b-noline.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/button/s-arrow-b.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/button/s-arrow-bo.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/button/s-arrow-noline.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/button/s-arrow-o.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/button/s-arrow.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/dd/drop-add.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/dd/drop-no.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/dd/drop-yes.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/editor/tb-sprite.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/form/checkbox.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/form/clear-trigger.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/form/clear-trigger.psd
+- lipsiadmin_generators/backend/templates/images/ext/default/form/date-trigger.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/form/date-trigger.psd
+- lipsiadmin_generators/backend/templates/images/ext/default/form/error-tip-corners.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/form/exclamation.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/form/radio.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/form/search-trigger.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/form/search-trigger.psd
+- lipsiadmin_generators/backend/templates/images/ext/default/form/text-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/form/trigger-tpl.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/form/trigger.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/form/trigger.psd
+- lipsiadmin_generators/backend/templates/images/ext/default/gradient-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/arrow-left-white.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/arrow-right-white.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/col-move-bottom.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/col-move-top.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/columns.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/dirty.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/done.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/drop-no.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/drop-yes.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/footer-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/grid-blue-hd.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/grid-blue-split.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/grid-hrow.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/grid-loading.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/grid-split.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/grid-vista-hd.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/grid3-hd-btn.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/grid3-hrow-over.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/grid3-hrow.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/grid3-special-col-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/grid3-special-col-sel-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/group-by.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/group-collapse.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/group-expand-sprite.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/group-expand.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/hd-pop.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/hmenu-asc.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/hmenu-desc.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/hmenu-lock.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/hmenu-lock.png
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/hmenu-unlock.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/hmenu-unlock.png
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/invalid_line.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/loading.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/mso-hd.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/nowait.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/page-first-disabled.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/page-first.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/page-last-disabled.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/page-last.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/page-next-disabled.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/page-next.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/page-prev-disabled.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/page-prev.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/pick-button.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/refresh.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/row-check-sprite.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/row-expand-sprite.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/row-over.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/row-sel.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/sort-hd.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/sort_asc.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/sort_desc.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/grid/wait.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/collapse.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/expand.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/gradient-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/mini-bottom.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/mini-left.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/mini-right.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/mini-top.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/ns-collapse.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/ns-expand.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/panel-close.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/panel-title-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/panel-title-light-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/stick.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/stuck.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/tab-close-on.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/layout/tab-close.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/menu/checked.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/menu/group-checked.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/menu/item-over.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/menu/menu-parent.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/menu/menu.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/menu/unchecked.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/panel/corners-sprite.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/panel/left-right.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/panel/light-hd.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/panel/tool-sprite-tpl.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/panel/tool-sprites.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/panel/tools-sprites-trans.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/panel/top-bottom.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/panel/top-bottom.png
+- lipsiadmin_generators/backend/templates/images/ext/default/panel/white-corners-sprite.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/panel/white-left-right.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/panel/white-top-bottom.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/progress/progress-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/qtip/bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/qtip/close.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/qtip/tip-anchor-sprite.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/qtip/tip-sprite.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/s.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/shadow-c.png
+- lipsiadmin_generators/backend/templates/images/ext/default/shadow-lr.png
+- lipsiadmin_generators/backend/templates/images/ext/default/shadow.png
+- lipsiadmin_generators/backend/templates/images/ext/default/shared/blue-loading.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/shared/calendar.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/shared/glass-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/shared/hd-sprite.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/shared/large-loading.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/shared/left-btn.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/shared/loading-balls.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/shared/right-btn.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/shared/warning.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/e-handle-dark.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/e-handle.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/ne-handle-dark.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/ne-handle.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/nw-handle-dark.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/nw-handle.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/s-handle-dark.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/s-handle.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/se-handle-dark.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/se-handle.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/square.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/sw-handle-dark.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/sizer/sw-handle.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/slider/slider-bg.png
+- lipsiadmin_generators/backend/templates/images/ext/default/slider/slider-thumb.png
+- lipsiadmin_generators/backend/templates/images/ext/default/slider/slider-v-bg.png
+- lipsiadmin_generators/backend/templates/images/ext/default/slider/slider-v-thumb.png
+- lipsiadmin_generators/backend/templates/images/ext/default/tabs/scroll-left.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tabs/scroll-right.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tabs/scroller-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tabs/tab-btm-inactive-left-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tabs/tab-btm-inactive-right-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tabs/tab-btm-left-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tabs/tab-btm-right-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tabs/tab-close.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tabs/tab-strip-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tabs/tab-strip-bg.png
+- lipsiadmin_generators/backend/templates/images/ext/default/tabs/tab-strip-btm-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tabs/tabs-sprite.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/toolbar/bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/toolbar/btn-arrow-light.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/toolbar/btn-arrow.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/toolbar/btn-over-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/toolbar/gray-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/toolbar/more.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/toolbar/tb-bg.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/toolbar/tb-btn-sprite.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/toolbar/tb-xl-btn-sprite.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/toolbar/tb-xl-sep.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/arrows.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/drop-add.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/drop-between.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/drop-no.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/drop-over.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/drop-under.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/drop-yes.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/elbow-end-minus-nl.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/elbow-end-minus.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/elbow-end-plus-nl.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/elbow-end-plus.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/elbow-end.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/elbow-line.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/elbow-minus-nl.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/elbow-minus.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/elbow-plus-nl.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/elbow-plus.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/elbow.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/folder-open.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/folder.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/leaf.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/loading.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/tree/s.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/window/icon-error.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/window/icon-info.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/window/icon-question.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/window/icon-warning.gif
+- lipsiadmin_generators/backend/templates/images/ext/default/window/left-corners.png
+- lipsiadmin_generators/backend/templates/images/ext/default/window/left-corners.psd
+- lipsiadmin_generators/backend/templates/images/ext/default/window/left-right.png
+- lipsiadmin_generators/backend/templates/images/ext/default/window/left-right.psd
+- lipsiadmin_generators/backend/templates/images/ext/default/window/right-corners.png
+- lipsiadmin_generators/backend/templates/images/ext/default/window/right-corners.psd
+- lipsiadmin_generators/backend/templates/images/ext/default/window/top-bottom.png
+- lipsiadmin_generators/backend/templates/images/ext/default/window/top-bottom.psd
+- lipsiadmin_generators/backend/templates/images/ext/expressinstall.swf
+- lipsiadmin_generators/backend/templates/javascripts/controls.js
+- lipsiadmin_generators/backend/templates/javascripts/dragdrop.js
+- lipsiadmin_generators/backend/templates/javascripts/effects.js
+- lipsiadmin_generators/backend/templates/javascripts/ext.js
+- lipsiadmin_generators/backend/templates/javascripts/prototype.js
+- lipsiadmin_generators/backend/templates/layouts/backend.html.haml
+- lipsiadmin_generators/backend/templates/migrations/create_accounts.rb
+- lipsiadmin_generators/backend/templates/models/account.rb
+- lipsiadmin_generators/backend/templates/models/account_access.rb
+- lipsiadmin_generators/backend/templates/models/notifier.rb
+- lipsiadmin_generators/backend/templates/stylesheets/backend.css
+- lipsiadmin_generators/backend/templates/stylesheets/ext.css
+- lipsiadmin_generators/backend/templates/stylesheets/login.css
+- lipsiadmin_generators/backend/templates/stylesheets/print.css
+- lipsiadmin_generators/backend/templates/stylesheets/standard.css
+- lipsiadmin_generators/backend/templates/test/fixtures/accounts.yml
+- lipsiadmin_generators/backend/templates/test/unit/account_test.rb
+- lipsiadmin_generators/backend/templates/views/backend/accounts/_form.html.haml
+- lipsiadmin_generators/backend/templates/views/backend/accounts/edit.html.haml
+- lipsiadmin_generators/backend/templates/views/backend/accounts/index.rjs
+- lipsiadmin_generators/backend/templates/views/backend/accounts/new.html.haml
+- lipsiadmin_generators/backend/templates/views/backend/base/index.html.haml
+- lipsiadmin_generators/backend/templates/views/backend/base/welcome.html.haml
+- lipsiadmin_generators/backend/templates/views/backend/sessions/new.html.haml
+- lipsiadmin_generators/backend/templates/views/javascripts/backend.js.erb
+- lipsiadmin_generators/backend/templates/views/javascripts/locale.js.erb
+- lipsiadmin_generators/backend/templates/views/notifier/registration.html.erb
+- lipsiadmin_generators/backend/templates/views/notifier/support_request.html.erb
+- lipsiadmin_generators/backend_page/backend_page_generator.rb
+- lipsiadmin_generators/backend_page/REMEMBER
+- lipsiadmin_generators/backend_page/templates/controller.rb
+- lipsiadmin_generators/backend_page/templates/form.html.haml
+- lipsiadmin_generators/backend_page/templates/form_scaffolding.html.haml
+- lipsiadmin_generators/backend_page/templates/functional_test.rb
+- lipsiadmin_generators/backend_page/templates/helper.rb
+- lipsiadmin_generators/backend_page/templates/view_edit.html.haml
+- lipsiadmin_generators/backend_page/templates/view_index.rjs.erb
+- lipsiadmin_generators/backend_page/templates/view_new.html.haml
+- lipsiadmin_generators/frontend/frontend_generator.rb
+- lipsiadmin_generators/frontend/REMEMBER
+- lipsiadmin_generators/frontend/templates/config/locales/frontend/de.yml
+- lipsiadmin_generators/frontend/templates/config/locales/frontend/en.yml
+- lipsiadmin_generators/frontend/templates/config/locales/frontend/it.yml
+- lipsiadmin_generators/frontend/templates/controllers/frontend/base_controller.rb
+- lipsiadmin_generators/frontend/templates/controllers/frontend/sessions_controller.rb
+- lipsiadmin_generators/frontend/templates/controllers/frontend_controller.rb
+- lipsiadmin_generators/frontend/templates/helpers/frontend_helper.rb
+- lipsiadmin_generators/frontend/templates/layouts/frontend.html.haml
+- lipsiadmin_generators/frontend/templates/stylesheets/frontend.css
+- lipsiadmin_generators/frontend/templates/views/frontend/base/index.html.haml
+- lipsiadmin_generators/frontend/templates/views/frontend/sessions/new.html.haml
+- lipsiadmin_generators/loops/loops_generator.rb
+- lipsiadmin_generators/loops/templates/app/loops/APP_README
+- lipsiadmin_generators/loops/templates/app/loops/simple_loop.rb
+- lipsiadmin_generators/loops/templates/config/loops.yml
+- lipsiadmin_generators/loops/templates/script/loops
+- lipsiadmin_generators/pdf/pdf_generator.rb
+- lipsiadmin_generators/pdf/templates/layout.html.erb
+- lipsiadmin_generators/pdf/templates/stylesheets/print.css
+- lipsiadmin_generators/pdf/templates/view.html.haml
+- lipsiadmin_generators/state_session/REMEMBER
+- lipsiadmin_generators/state_session/state_session_generator.rb
+- lipsiadmin_generators/state_session/templates/controller.rb
+- lipsiadmin_generators/state_session/templates/functional_test.rb
+- lipsiadmin_generators/state_session/templates/migration.rb
+- lipsiadmin_generators/state_session/templates/model.rb
+- lib/access_control/authentication.rb
+- lib/access_control/base.rb
+- lib/controller/ext.rb
+- lib/controller/lipsiadmin_controller.rb
+- lib/controller/pdf_builder.rb
+- lib/controller/rescue.rb
+- lib/controller/responds_to_parent.rb
+- lib/data_base/attachment/attach.rb
+- lib/data_base/attachment/geometry.rb
+- lib/data_base/attachment/iostream.rb
+- lib/data_base/attachment/processor.rb
+- lib/data_base/attachment/storage.rb
+- lib/data_base/attachment/thumbnail.rb
+- lib/data_base/attachment/upfile.rb
+- lib/data_base/attachment.rb
+- lib/data_base/attachment_table.rb
+- lib/data_base/translate_attributes.rb
+- lib/data_base/utility_scopes.rb
+- lib/data_base/without_table.rb
+- lib/generator.rb
+- lib/lipsiadmin.rb
+- lib/lipsiadmin_tasks.rb
+- lib/locale/de.yml
+- lib/locale/en.yml
+- lib/locale/it.yml
+- lib/loops/base.rb
+- lib/loops/daemonize.rb
+- lib/loops/process_manager.rb
+- lib/loops/worker.rb
+- lib/loops/worker_pool.rb
+- lib/loops.rb
+- lib/mailer/exception/exception.html.erb
+- lib/mailer/exception_notifier.rb
+- lib/mailer/pdf_builder.rb
+- lib/utils/html_entities.rb
+- lib/utils/literal.rb
+- lib/utils/pdf_builder.rb
+- lib/version.rb
+- lib/view/helpers/active_record_helper.rb
+- lib/view/helpers/backend_helper.rb
+- lib/view/helpers/ext/button.rb
+- lib/view/helpers/ext/column_model.rb
+- lib/view/helpers/ext/component.rb
+- lib/view/helpers/ext/configuration.rb
+- lib/view/helpers/ext/grid.rb
+- lib/view/helpers/ext/store.rb
+- lib/view/helpers/ext/templates/grid_functions.js.erb
+- lib/view/helpers/ext/tool_bar.rb
+- lib/view/helpers/ext_helper.rb
+- lib/view/helpers/frontend_helper.rb
+- lib/view/helpers/pdf_helper.rb
+- lib/view/helpers/view_helper.rb
+- resources/javascripts/swfuploadpanel.js
+- resources/javascripts/ux.js
+- resources/pd4ml/pd4ml.jar
+- resources/pd4ml/ruby/Pd4Ruby.class
+- resources/pd4ml/ruby/Pd4Ruby.java
+- resources/pd4ml/ss_css2.jar
+- resources/rdoc/horo.rb
+- tasks/lipsiadmin_tasks.rake
+has_rdoc: true
+homepage: http://www.lipsiadmin.com
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      segments: 
+      - 0
+      version: "0"
+requirements: 
+- ImageMagick
+rubyforge_project: lipsiadmin
+rubygems_version: 1.3.6
+signing_key: 
+specification_version: 3
+summary: Lipsiadmin is a new revolutionary admin for your projects.Lipsiadmin is based on Ext Js 2.0. framework (with prototype adapter) and is ready for Rails 2.0. This admin is for newbie developper but also for experts, is not entirely written in javascript because the aim of developper wose build in a agile way web/site apps so we use extjs in a new intelligent way a mixin of 'old' html and new ajax functions, for example ext manage the layout of page, grids, tree and errors, but form are in html code.
+test_files: []
+
+

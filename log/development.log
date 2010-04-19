@@ -40199,3 +40199,16 @@ Processing BibliotecaController#index (for 127.0.0.1 at 2010-04-19 11:53:19) [GE
 Rendering template within layouts/application
 Rendering biblioteca/index
 Completed in 20ms (View: 20, DB: 0) | 200 OK [http://localhost/biblioteca]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_encoding TO 'UTF-8'[0m
+
+
+Processing PrincipalController#index (for 127.0.0.1 at 2010-04-19 14:42:49) [GET]
+  [4;35;1mNoticia Load (190.0ms)[0m   [0mSELECT * FROM "noticias" [0m
+  [4;36;1mEvento Load (20.0ms)[0m   [0;1mSELECT * FROM "eventos" [0m
+Rendering template within layouts/application
+Rendering principal/index
+  [4;35;1mCategorianoticia Load (30.0ms)[0m   [0mSELECT * FROM "categorianoticias" WHERE ("categorianoticias"."id" = 1) [0m
+  [4;36;1mCategorianoticia Load (0.0ms)[0m   [0;1mSELECT * FROM "categorianoticias" WHERE ("categorianoticias"."id" = 2) [0m
+Completed in 3164ms (View: 2804, DB: 240) | 200 OK [http://localhost/]
