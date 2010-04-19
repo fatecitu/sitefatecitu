@@ -1,6 +1,9 @@
 <h1> Últimas <span>Notícias</span> </h1>
 <% for noticia in @noticias %>
-  <h3> <%=h noticia.titulo %> </h3>
+  <h3> <%= link_to noticia.titulo, :controller=> "principal", :action=>"detalhes", :id => noticia %> </h3>
   <p class="quote"><%=h noticia.textocurto %></p>
-  <h5> Categoria: <%= noticia.categorianoticia.descricao %> </h5>
+  <h5> Categoria: <%= noticia.categorianoticia.descricao %><h5>   
+  <% if noticia.fonte.length > 5 %>  Fonte: <%= noticia.fonte %> </h5>  <% end %>
+  <% if noticia.vejamais.length > 5 %>  Veja Mais: <%= link_to(noticia.vejamais) %> </h5>  <% end %>
 <% end %>
+

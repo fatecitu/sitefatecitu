@@ -13,7 +13,8 @@
    </head>
    <body>
         <div id="principal">
-<img src="/images/logofatec.jpg" alt="logo da Fatec Itu" />
+		
+            <img src="/images/logofatec.jpg" alt="logo da Fatec Itu" align="center" />
             <div id="principal-header">
                 <div id="principal-name"><span>Fatec </span>Itu</div>
 		<div id="principal-slogan"><span>&quot;</span>Fatec Dom Amaury Castanho<span>&quot;</span></div>
@@ -21,7 +22,7 @@
             
 	    <div id="principal-eyecatcher">
                 <div id="principal-navigation"><ul id="navigation">
-				<li><a href="#">Início</a></li>
+				<li><%= link_to "Início", :controller=> "principal", :action=>"index" %></li>
 				<li><a href="#">Cursos</a></li>
 				<li><a href="#">Como chegar</a></li>
 				<li><a href="#">Vestibular</a></li>
@@ -40,15 +41,19 @@
             <div id="principal-conteudo">
 
 		<div id="conteudo">
-                <%= yield %>
+		       <% unless flash[:aviso].blank? %>
+			     <div id="aviso"> <%= flash[:aviso] %> </div>
+			   <% end %>
+               <%= yield %>
                 	
 		</div> <!-- conteudo END -->
 
 		<div id="border">
 			<h4>Acesso Rápido</h4>
 			<ul id="subnavigation">
-				<li><a href="#">Área do Professor</a></li>
-				<li><a href="#">Biblioteca</a></li>
+				<li><%= link_to "Área do Professor", :controller=> "backend", :action=>"index" %> </li>
+				<li><%= link_to "Área do Aluno", :controller=> "backend", :action=>"index" %> </li>
+				<li><%= link_to "Biblioteca", :controller=> "biblioteca", :action=>"index" %></li>
 				<li><a href="#">Coordenação</a></li>
 				<li><a href="#">Direção</a></li>
 				<li><a href="#">Jornal</a></li>
@@ -59,18 +64,34 @@
 
 			</ul>
 			<hr />
-
+            <% if not @eventos.nil? %>
 			<h4>Eventos</h4>
-			<ul id="news">
-				<% for evento in @eventos %>
+			<ul id="news">			
+				<% for evento in @eventos  %>
                    <li> <b> <%=h evento.nome %> </b> de <%=h evento.datainicial.strftime("%d/%m") %> 
 				            a <%=h evento.datafinal.strftime("%d/%m") %>
-							<%= link_to "#{image_tag("editar.png", :border => 0, :alt => "Efetua a inscrição neste evento!", :title => "Efetue a sua inscrição no evento")}", {:controller => "principal", :action => "inscricao_evento", :evento => evento.id} %>
+							<%= link_to "#{image_tag("editar.png", :border => 0, :alt => "Efetua a inscrição neste evento!", :title => "Efetue a sua inscrição no evento")}", {:controller => "backend", :action => "index"} %>
 				   </li>  		
-				<% end %>   
+				<% end %>   				
+			</ul>
+			<% end %>
+			
+         <h4>Parcerias</h4>
+			<ul id="news">			
+				   
+
+  <a href="http://www.itu.sp.gov.br" target="_blank">
+  <img src="images/logo-pmitu.jpg" alt="Logo da Prefeitura da Estância Turística de Itu" title="Logo da Prefeitura da Estância Turística de Itu" width="112" height="100" > </a>
+  <a href="http://www.educacao.sp.gov.br/" target="_blank">
+  <img src="images/logotipo_governo_estado_sp.jpg" alt="Logo do Governo do Estado de São Paulo" title="Logo do Governo do Estado de São Paulo" width="112" height="100" > </a>
+  
+
+
+
+				</class>
 			</ul>
 			<hr />
-
+			
 			<h4>Nosso Endereço</h4>
 			<p>Fatec Itu<br />				
             Rua Sorocaba, 119<br />
@@ -89,7 +110,7 @@ E-Mail: <a href="mailto:assessoriafatecitu@gmail.com">assessoriafatecitu@gmail.c
             <div id="principal-footer">
                  <div id="footer">
                     <div id="footer-copyright">&copy; 2010 Fatec Itu - Todos os direitos reservados. <br />
-					<p> Made with Ruby on Rails & Heroku </p>
+					<p> Desenvolvido com Ruby on Rails & PostgreSQL </p>
                     
             </div>
 

@@ -20,6 +20,7 @@ class Account < ActiveRecord::Base
   # Relations
   has_many :discente
   has_many :docente
+  has_many :inscricao
   
   
   # Callbacks

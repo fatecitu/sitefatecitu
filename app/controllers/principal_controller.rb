@@ -2,6 +2,12 @@ class PrincipalController < ApplicationController
   def index
      @noticias = Noticia.find(:all)
 	 @eventos = Evento.find(:all)
+  end
+  def detalhes
+  @noticia = Noticia.find(params[:id].to_i)
+  rescue ActiveRecord::RecordNotFound
+    flash[:aviso] = "Notícia não encontrada!"
+	redirect_to :controller => "principal", :action => "index"
   end  
   def procurar
       @termo = params[:busca].downcase

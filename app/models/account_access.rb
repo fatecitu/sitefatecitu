@@ -19,13 +19,11 @@ class AccountAccess < Lipsiadmin::AccessControl::Base
     # 
     # <tt>current_account</tt> is an instance of current logged account
     # 
-    role.project_module :account do |project|
-      project.menu :list,   "/backend/accounts.js" do |submenu|
-        submenu.add :new, "/backend/accounts/new"
-      end
-    end
+    
     
     # Please don't remove this comment! It's used for auto adding project modules
+     
+
     role.project_module "Cadastros Auxiliares" do |project|
       project.menu :tags,   "/backend/tags.js" do |submenu|
         submenu.add :new, "/backend/tags/new"
@@ -74,15 +72,27 @@ class AccountAccess < Lipsiadmin::AccessControl::Base
       project.menu :list,   "/backend/downloads.js" do |submenu|
         submenu.add :new, "/backend/downloads/new"
       end
-    end 
+    end
+   	role.project_module :inscricaos do |project|
+      project.menu :list,   "/backend/inscricaos.js" do |submenu|
+        submenu.add :new, "/backend/inscricaos/new"
+      end
+    end
+	role.project_module :account do |project|
+      project.menu :list,   "/backend/accounts.js" do |submenu|
+        submenu.add :new, "/backend/accounts/new"
+      end
+    end
   end
   roles_for :discente do |role, current_account|
     role.allow_all_actions "/backend"
     role.allow_all_actions "/backend/base"
-	  role.project_module :account do |project|
-        project.menu :list,   "/backend/accounts.js" do |submenu|
-           submenu.add :new, "/backend/accounts/new"
-        end
+     role.project_module "Menu do Aluno" do |project|
+      project.menu :inscricaos,   "/backend/inscricaos.js" do |submenu|
+        submenu.add :new, "/backend/inscricaos/new"
       end
-   end  
+     end      
+   end	 
 end
+
+

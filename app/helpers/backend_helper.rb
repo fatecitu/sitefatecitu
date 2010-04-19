@@ -36,4 +36,7 @@ def tab_editor(klass, method, name, options={})
     
     javascript_tag(js)
   end
+  def ext_alert(title, message)
+           call "Ext.Msg.alert", title, message
+  end
 end

@@ -295,3 +295,14 @@ img.alignright {
 img.alignabove {
 	margin: 0 0 10px 0;
 }
+
+#aviso {
+    margin: 10px 10px 10px 10px;
+	padding: 5px 5px 5px 27px;
+	font-weight: bold;
+	font: Verdana;
+	border: 1px solid #C68484;
+	background: #fcc
+	url(../images/exclamation.png) no-repeat 5px center;
+	color: #C68484;
+}

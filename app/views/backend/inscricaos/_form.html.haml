@@ -1,0 +1,12 @@
+=simple_error_messages_for :inscricao
+-tab :general do
+  %table.full
+    %tr
+      %td.fixed=human_name_for :inscricao, :evento
+      %td=collection_select :inscricao, :evento_id, Evento.find(:all, :conditions => ['datainicial <= ? and datafinal >= ?', Date.current, Date.current]), :id, :nome
+    %tr
+      %td.fixed=human_name_for :inscricao, :account      
+      %td=collection_select :inscricao, :account_id, Account.find(:all, :conditions => ['id = ?', current_account],:order=> 'surname ASC'), :id, :full_name
+    %tr
+      %td.fixed=human_name_for :inscricao, :observacao
+      %td=text_field :inscricao, :observacao

@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.namespace(:backend) do |backend|
+    backend.resources :inscricaos
     backend.resources :attachments, :collection => { :order => :post }
     backend.resources :downloads
     backend.resources :noticias

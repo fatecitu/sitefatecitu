@@ -1,0 +1,8 @@
+<h1>  <span> <%= @noticia.titulo %></span> </h1>
+  <p> <%=h @noticia.textocurto %></p> </p>
+  <% if not @noticia.textolongo.blank? %>  <p class="quote"> <%= @noticia.textolongo %> </class>  <% end %>  
+  <h5> Categoria: <%= @noticia.categorianoticia.descricao %><h5>   
+  <% if @noticia.fonte.length > 5 %>  Fonte: <%= @noticia.fonte %> </h5>  <% end %>
+  <% if @noticia.vejamais.length > 5 %>  Veja Mais: <%= link_to(@noticia.vejamais, @noticia.vejamais) %> </h5>  <% end %>
+
+

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100323145545) do
+ActiveRecord::Schema.define(:version => 20100412115535) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(:version => 20100323145545) do
     t.string   "crypted_password"
     t.string   "role"
     t.string   "modules"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "attachments", :force => true do |t|
+    t.string   "attached_file_name"
+    t.string   "attached_content_type"
+    t.integer  "attached_file_size"
+    t.integer  "attacher_id"
+    t.string   "attacher_type"
+    t.string   "attacher_name"
+    t.integer  "position",              :default => 1
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,7 +47,8 @@ ActiveRecord::Schema.define(:version => 20100323145545) do
     t.datetime "updated_at"
   end
 
-  create_table "categorianoticias", :force => true do |t|
+  create_table "categorianoticias", :id => false, :force => true do |t|
+    t.integer  "id",                       :null => false
     t.string   "descricao",  :limit => 50, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -67,7 +80,8 @@ ActiveRecord::Schema.define(:version => 20100323145545) do
     t.datetime "updated_at"
   end
 
-  create_table "disciplinas_docentes", :force => true do |t|
+  create_table "disciplinas_docentes", :id => false, :force => true do |t|
+    t.integer  "id",            :null => false
     t.integer  "disciplina_id"
     t.integer  "docente_id"
     t.datetime "created_at"
@@ -123,6 +137,14 @@ ActiveRecord::Schema.define(:version => 20100323145545) do
     t.datetime "updated_at"
   end
 
+  create_table "inscricaos", :force => true do |t|
+    t.integer  "evento_id"
+    t.integer  "account_id"
+    t.string   "observacao"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "noticias", :force => true do |t|
     t.string   "titulo"
     t.string   "textocurto"
@@ -136,15 +158,16 @@ ActiveRecord::Schema.define(:version => 20100323145545) do
     t.datetime "updated_at"
   end
 
-  create_table "tags", :force => true do |t|
-    t.string   "descricao",  :limit => 50, :null => false
+  create_table "noticias_tags", :id => false, :force => true do |t|
+    t.integer  "id",         :null => false
+    t.integer  "tag_id"
+    t.integer  "noticia_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "tags_noticias", :force => true do |t|
-    t.integer  "tag_id"
-    t.integer  "noticia_id"
+  create_table "tags", :force => true do |t|
+    t.string   "descricao",  :limit => 50, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

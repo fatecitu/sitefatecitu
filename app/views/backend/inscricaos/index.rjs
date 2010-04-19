@@ -1,0 +1,19 @@
+page.grid do |grid|
+  grid.id "grid-inscricaos"
+  grid.title list_title_for(Inscricao)
+  grid.base_path "/backend/inscricaos"
+  grid.forgery_protection_token request_forgery_protection_token
+  grid.authenticity_token form_authenticity_token
+  grid.tbar  [:add] #:default
+  grid.sm :checkbox
+  grid.store do |store|
+    store.url "/backend/inscricaos.json"
+    store.fields @column_store.store_fields    
+	store.groupField "evento.nome"  
+	store.sortInfo  :field => "updated_at", :direction => "ASC"
+  end
+  grid.columns do |columns|
+    columns.fields @column_store.column_fields
+  end
+  grid.bbar  :store => grid.get_store, :pageSize => params[:limit], :displayInfo => true
+end
